@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Contact - TUANNUR555</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="flower.jpg" type="image/jpg">
+<head>
+
+<!--header-->
+<style>
+  .header { 
+  margin-top: -12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-bottom: -12px;
+  overflow: hidden;
+  position: static;
+  background-color: transparent;
+ }
+</style>
+
+<div class="header">
+    <img src="header.jpg" alt="header" width="100%" height="100%">
+</div>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  right: 0;
+  font-family: century gothic;
+  font-size: 15px;
+  left: 0;
+  top: 8;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+
+<!-- Navbar -->
+<ul>
+    <li><a href="homepage.html">HOME</a></li>
+    <li><a href="profile.html">PROFILE</a></li>
+    <li><a href="experience.html">EXPERIENCE</a></li>
+    <li><a href="education.html">EDUCATION</a></li>
+    <li><a href="family.html">FAMILY</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+</ul>
+
+  <style>
+
+  body {
+  background-image: url('contact.jpg');
+  }
+  </style>
+
+<br><br><br><br><br><br>
+
+  <style >
+    h1 {font-size: 65px;}
+    h1 {color: #F08080}
+    h1 {font-family: century gothic;}
+    h1 {text-shadow: 5px 5px 5px black;}
+    h1 {text-align: center;}
+  </style>
+
+  <div>
+    <h1>CONTACT INFORMATION</h1>
+  </div>
+
+  <br><br>
+
+      <!--column-->
+<style>
+* {
+  box-sizing: border-box;
+  column-gap: 20px
+}
+
+.column1 {
+  float: left;
+  width: 1050px;
+  padding: 10px;
+  height: 1010px;
+  margin-left: 30px;
+  font-family: century gothic;
+  text-align: center;
+  font-size: 16px;
+}
+
+.column2 {
+  float: right;
+  width: 350px;
+  padding: 10px;
+  height: 970px;
+  margin-right: 30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+
+   <div class="column1" style="background-color: #9B3FB4;">
+    <h2 style="color: white; text-shadow: 5px 5px 5px black"><strong>FOR MORE DETAILS FEEL FREE TO CONTACT ME:</strong></h2><br>
+    <p style="font-size: 20px"><img src="call.png" alt="call" style="width: 21px; height: 21px; margin-left: auto; margin-right: auto;"> +60179422451</p>
+    <p style="font-size: 20px"><img src="email.png" alt="email" style="width: 23px; height: 23px; margin-left: auto; margin-right: auto;"> tuannur555@gmail.com</p>
+    <br>
+    <p style="border-bottom-style: dotted;"></p>
+    <br>
+    <h2 style="color: white; text-shadow: 5px 5px 5px black"><strong>OR VISIT MY SOCIAL MEDIA:</strong></h2><br>
+    <p> <a href="https://twitter.com/syhrh____"> <img border="0" alt="twitter" src="twitter.png" width="110" height="110"></a></p>
+    <p style="font-family: century gothic; color: #DCD967; text-decoration-line: underline; text-decoration-color: #DCD967"><strong>TWITTER</strong></p><br>
+    <p> <a href="https://www.instagram.com/iamsyhrhh_/?hl=en"> <img border="0" alt="instagram" src="instagram.png" width="120" height="120"></a></p>
+    <p style="font-family: century gothic; color: #DCD967; text-decoration-line: underline; text-decoration-color: #DCD967"><strong>INSTAGRAM</strong></p><br>
+    <p> <a href="https://www.facebook.com/tuan.syahirah.7/"> <img border="0" alt="facebook" src="facebook.png" width="155" height="115"></a></p>
+    <p style="font-family: century gothic; color: #DCD967; text-decoration-line: underline; text-decoration-color: #DCD967"><strong>FACEBOOK</strong></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column2" style="background-color: #9B3FB4;">
+  <p style="font-family: century gothic; font-size: 20px; color: #E7E257; text-align: center; border-style: dashed; border-color: #F67B3C"><strong>TIME</strong></p>
+<canvas id="canvas" width="230" height="230"
+style="background-color:transparent; margin-left: auto; margin-right: auto; display: block;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+
+<br><br>
+
+    <p style="font-family: century gothic; font-size: 20px; color: #E7E257; text-align: center; border-style: dashed; border-color: #F67B3C"><strong>MUSIC</strong></p> 
+    <img src="monstax.jpg" alt="monstax" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+    <audio controls>
+    <source src="someonesomeone.mp3" type="audio/mpeg">
+    </audio>
+
+    <p style="font-family: century gothic; font-size: 20px; color: #E7E257; text-align: center; border-style: dashed; border-color: #F67B3C"><strong>OWNER</strong></p> 
+    <p style="font-family: century gothic; font-size: 13px; margin-left: 10px; margin-right: 10px; color: black; border-color: black;"><strong>- NAME: TUAN NUR SYAHIRAH BT TUAN ABDUL AZIZ <br> - CLASS: D1IM1105C <br> - MATRIC NO: 2018203604 <br> - SUBJECT: INTRODUCTION TO WEB CONTENT MANAGEMENT AND DESIGN (IMD311) <br> - PREPARED FOR: EN MOHD FAIZAL HAINI BIN FADZIL</strong></p>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--footer--> 
+  <style>
+    .footer {
+      position: absolute;
+      text-align: center;
+      background: #2E2E2E;
+      color: white;
+      right: 0;
+    left: 0;
+    }   
+  </style>
+
+    <div class="footer">
+      <p style="font-size: 43px; font-family: brush script mt"><i>"Difficult roads often lead to beautiful occasion."</i></p>
+      <p style="font-size: 18px; font-family: century gothic"><strong>© Tuan Nur Syahirah <sup>2020</sup></strong></style></p>
+    </div>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Profile - TUANNUR555</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="flower.jpg" type="image/jpg">
+<head>
+
+<!--header-->
+<style>
+  .header { 
+  margin-top: -12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-bottom: -12px;
+  overflow: hidden;
+  position: static;
+  background-color: transparent;
+ }
+</style>
+
+<div class="header">
+    <img src="header.jpg" alt="header" width="100%" height="100%">
+</div>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  right: 0;
+  font-family: century gothic;
+  font-size: 15px;
+  left: 0;
+  top: 8;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+
+<!-- Navbar -->
+<ul>
+    <li><a href="homepage.html">HOME</a></li>
+    <li><a href="profile.html">PROFILE</a></li>
+    <li><a href="experience.html">EXPERIENCE</a></li>
+    <li><a href="education.html">EDUCATION</a></li>
+    <li><a href="family.html">FAMILY</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+</ul>
+
+  <style>
+
+  body {
+  background-image: url('experience.jpg') }
+  </style>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    h1 {font-size: 75px;}
+    h1 {color: #F08080}
+    h1 {font-family: century gothic;}
+    h1 {text-shadow: 3px 3px 3px black;}
+    h1 {text-align: center;}
+  </style>
+  
+  <div>
+    <h1>EXPERIENCE</h1>
+  </div>
+
+      <!--column-->
+<style>
+* {
+  box-sizing: border-box;
+  column-gap: 20px
+}
+
+.column1 {
+  float: left;
+  width: 1050px;
+  padding: 10px;
+  height: 1420px;
+  margin-left: 30px;
+  font-family: century gothic;
+  text-align: center;
+  font-size: 16px;
+}
+
+.column2 {
+  float: right;
+  width: 350px;
+  padding: 10px;
+  height: 970px;
+  margin-right: 30px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+
+   <div class="column1" style="background-color: #F67B3C;">
+
+<style>
+      p {font-family: century gothic;
+        font-size: 19px;
+        margin-right: 70px;
+        margin-left: 70px;}
+    </style>
+
+  <div> <h2 style="color: white; font-size: 45px; font-family: arial; text-align: center; text-shadow: 2px 2px 2px black;">WORK EXPERIENCE</h2></div>
+
+  <div>
+        <p style="text-align: center;"><strong><u>2018 - 2019 (WAITRESS)</u></strong></p>
+        <img src="pizza hut.jpg" alt="pizza hut" style="margin-left: auto; margin-right: auto; width: 190px; height: 190px;">
+        <p style="text-align: center;"><strong><i>Pizza Hut</i> <br> - work passionately in customer service in a high volume restaurant <br> - maintained a high tip average thanks to customer satisfaction <br> - complete customer service training class</strong></p>
+        <p style="border-bottom-style: dotted;"></p>
+  </div>
+
+<br>
+
+  <div>
+        <p style="text-align: center;"><strong><u>2019 - 2020 (CASHIER)</u></strong></p>
+        <img src="mydin.png" alt="mydin" style="margin-left: auto; margin-right: auto; width: 400px; height: 100px;">
+        <p style="text-align: center;"><strong><i>Mydin</i> <br> - work as a part time cashier <br> - receive "Best Worker Award" multiple times</strong></p> 
+        <p style="border-bottom-style: dotted;"></p> 
+  </div>
+ 
+    <br>
+
+  <div> <h2 style="color: white; font-size: 45px; font-family: arial; text-align: center; text-shadow: 2px 2px 2px black;">VOLUNTEER EXPERIENCE</h2></div>
+
+        <div>
+        <p style="text-align: center;"><strong><u>2019 (VOLUNTEER IN STUDENT ORGANIZATION IN UITM)</u></strong></p>
+        <img src="image_ck.jpg" alt="image_ck" style="margin-left: auto; margin-right: auto; width: 190px; height: 190px;">
+        <p style="text-align: center;"><strong><i>FACULTY OF INFORMATION MANAGEMENT CLUB</i> <br> - handle several programs such as workshop, festival and talks <br> - improve communication skills between the members of organization</strong></p>
+        <p style="border-bottom-style: dotted;"></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column2" style="background-color: #F67B3C;">
+  <p style="font-family: century gothic; font-size: 20px; color: blue; text-align: center; border-style: dashed; border-color: #6833A0"><strong>TIME</strong></p>
+<canvas id="canvas" width="230" height="230"
+style="background-color:transparent; margin-left: auto; margin-right: auto; display: block;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+
+<br><br>
+
+    <p style="font-family: century gothic; font-size: 20px; color: blue; text-align: center; border-style: dashed; border-color: #A21414"><strong>MUSIC</strong></p> 
+    <img src="monstax.jpg" alt="monstax" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+    <audio controls>
+    <source src="someonesomeone.mp3" type="audio/mpeg">
+    </audio>
+
+    <p style="font-family: century gothic; font-size: 20px; color: blue; text-align: center; border-style: dashed; border-color: #A21414"><strong>OWNER</strong></p> 
+    <p style="font-family: century gothic; font-size: 13px; margin-left: 10px; margin-right: 10px; color: black; border-color: black;"><strong>- NAME: TUAN NUR SYAHIRAH BT TUAN ABDUL AZIZ <br> - CLASS: D1IM1105C <br> - MATRIC NO: 2018203604 <br> - SUBJECT: INTRODUCTION TO WEB CONTENT MANAGEMENT AND DESIGN (IMD311) <br> - PREPARED FOR: EN MOHD FAIZAL HAINI BIN FADZIL</strong></p>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--footer--> 
+  <style>
+    .footer {
+      position: absolute;
+      text-align: center;
+      background: #2E2E2E;
+      color: white;
+      right: 0;
+    left: 0;
+    }   
+  </style>
+
+    <div class="footer">
+      <p style="font-size: 43px; font-family: brush script mt"><i>"Difficult roads often lead to beautiful occasion."</i></p>
+      <p style="font-size: 18px; font-family: century gothic"><strong>© Tuan Nur Syahirah <sup>2020</sup></strong></style></p>
+    </div>
